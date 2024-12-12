@@ -648,8 +648,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -79.22882, y: -50}
-  m_SizeDelta: {x: 133.4836, y: 30}
+  m_AnchoredPosition: {x: -84.5, y: -50}
+  m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &340249308
 MonoBehaviour:
@@ -684,7 +684,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 0'
+  m_Text: 'Player Score: 0'
 --- !u!222 &340249309
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2520,8 +2520,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -78.6, y: -76.1}
-  m_SizeDelta: {x: 133.4836, y: 30}
+  m_AnchoredPosition: {x: -84.899994, y: -76.09999}
+  m_SizeDelta: {x: 300, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2125901132
 MonoBehaviour:
@@ -2556,7 +2556,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Best:'
+  m_Text: 'Best: Player Score: 0'
 --- !u!222 &2125901133
 CanvasRenderer:
   m_ObjectHideFlags: 0

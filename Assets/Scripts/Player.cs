@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private int _score;
+    public string bestPlayerName;
     private int _bestScore;
     private UI_Manager _uiManager;
 
@@ -46,11 +47,13 @@ public class Player : MonoBehaviour
 
 
 
-
+    
     
     void Start()
-    {
+    {   
         _bestScore = PlayerPrefs.GetInt("BestScore", 0);
+        bestPlayerName = PlayerPrefs.GetString("BestPlayerName", string.Empty);
+        
         _uiManager = GameObject.Find("Canvas").GetComponent<UI_Manager>();
         if (_uiManager == null )
         {
@@ -229,6 +232,8 @@ public class Player : MonoBehaviour
         {
             _bestScore = _score;
             PlayerPrefs.SetInt("BestScore", _bestScore);
+            bestPlayerName = MainMenu.currentPlayerName;
+            PlayerPrefs.SetString("BestPlayerName", bestPlayerName);
             _uiManager.UpdateBestScoreText(_bestScore);
         }
 

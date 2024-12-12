@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,7 +42,7 @@ public class UI_Manager : MonoBehaviour
 
         _gameOver.gameObject.SetActive(false);
         _pausePanel.SetActive(false);
-        _scoreText.text = "Score: " + 0;
+        _scoreText.text = MainMenu.currentPlayerName + " Score: " + 0;
         _bestScoreText.text = "Best: " + _player.BestScore();
         _gameManager = GameObject.Find("Game_Manager").GetComponent<GameManager>();
         
@@ -50,17 +51,19 @@ public class UI_Manager : MonoBehaviour
         {
             Debug.LogError("Game_Manager is NULL");
         }
-
+        
+        UpdateBestScoreText(PlayerPrefs.GetInt("BestScore"));
+        UpdateScoreText(0);
     }
 
     public void UpdateScoreText(int score)
     {
-        _scoreText.text = "Score: " + score;
+        _scoreText.text = MainMenu.currentPlayerName + " : " + score;
     }
 
     public void UpdateBestScoreText(int bestScore)
     {
-        _bestScoreText.text = "Best: " + bestScore;
+        _bestScoreText.text = "Best: " + PlayerPrefs.GetString("BestPlayerName", string.Empty) + " : " + bestScore;
     }
 
 
